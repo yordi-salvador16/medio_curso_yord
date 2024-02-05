@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro y Listado de Alquileres</title>
+</head>
+<body>
+    <h2>Registro de Alquiler de Camionetas</h2>
+    <form action="guardar_alquiler.php" method="post">
+        <label for="nombre_cliente">Nombre del Cliente:</label><br>
+        <input type="text" id="nombre_cliente" name="nombre_cliente" required><br>
+
+        <label for="fecha_alquiler">Fecha de Alquiler:</label><br>
+        <input type="date" id="fecha_alquiler" name="fecha_alquiler" required><br>
+
+        <label for="fecha_devolucion">Fecha de Devolución:</label><br>
+        <input type="date" id="fecha_devolucion" name="fecha_devolucion" required><br>
+
+        <label for="estado_alquiler">Estado del Alquiler:</label><br>
+        <select id="estado_alquiler" name="estado_alquiler" required>
+            <option value="Pendiente">Pendiente</option>
+            <option value="En curso">En curso</option>
+            <option value="Completado">Completado</option>
+        </select><br>
+
+        <label for="placa_camioneta">Placa de la Camioneta:</label><br>
+        <input type="text" id="placa_camioneta" name="placa_camioneta" required><br>
+
+        <input type="submit" value="Guardar Alquiler">
+    </form>
+
+    <h2>Listado de Alquileres</h2>
+    <form action="mostrar_alquiler.php" method="post">
+        <input type="submit" value="Mostrar Alquileres Guardados">
+    </form>
+</body>
+</html>
